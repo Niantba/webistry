@@ -1,15 +1,13 @@
 // You can remove this line when you're ready.
 console.log('Good luck!');
 
-function validateForm() {
-  const name = document.forms["webistryForm"]["name"].value;
-  const email = document.forms["webistryForm"]["email"].value;
+const formulaire = document.querySelector(".form")
+const form = document.querySelector("form")
+const success = document.querySelector(".succeeded")
 
-  if (name == "")   {
-    alert("Name must be filled out");
-    return false;
-  } else if (email == "")   {
-    alert("Email must be filled out");
-    return false;
-  }
-}
+form.addEventListener('submit', (event ) => {
+  event.preventDefault();
+
+  formulaire.classList.add('d-none');
+  success.classList.remove('d-none');
+})

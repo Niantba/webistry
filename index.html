@@ -13,19 +13,19 @@
 <body>
   <main>
     <div class="logos">
-      <img src="images/webistry-darklogo.svg" id="le-wagon" >
-      <img src="images/logo-lewagon-9c19fb39a748cd3b1f49059ce0dc6c0dfc4cc2447d5a9a3e01bd2d5a214faf3c.svg" id="webistry" >
+      <img src="images/webistry-darklogo.svg" id="le-wagon" alt="Webistry" >
+      <img src="images/logo-lewagon-9c19fb39a748cd3b1f49059ce0dc6c0dfc4cc2447d5a9a3e01bd2d5a214faf3c.svg" id="webistry" alt="Le Wagon" >
     </div>
     <div class="title">
-      <h1><span>Level up</span> your coding<br>skills with Webistry.</h1>
+      <h1><span class="level-up">Level up</span> your coding<br>skills with Webistry.</h1>
     </div>
     <div class = "form">
       <h3>Let's get started by knowing<br>more about you.</h3>
-      <form name="webistryForm" method="post" onsubmit="return validateForm()">
+      <form name="webistryForm" onsubmit="return validateForm()">
         <label for="name">Name</label><br>
-        <input type="text" placeholder="Enter your name" id="name" name="name"><br><br>
+        <input type="text" placeholder="Enter your name" id="name" name="name" required><br><br>
         <label for="email">Email</label><br>
-        <input type="text" placeholder="Enter your email" id="email" name="email"><br><br>
+        <input type="text" placeholder="Enter your email" id="email" name="email" required><br><br>
         <label for="language">What's your favorite coding language?</label><br>
         <select id="language" name="language">
           <option value="javascript">JavaScript</option>
@@ -33,10 +33,14 @@
           <option value="python">Python</option>
           <option value="java">Java</option>
         </select><br><br>
-        <input type="checkbox" id="info" name="info" value="accurate">
+        <input type="checkbox" id="info" name="info" required>
         <label for="info">The information provided above is accurate</label><br><br>
         <button type="submit">Level Up</button>
       </form>
+    </div>
+
+    <div class ="succeeded d-none">
+      <h3> <span class="success">Success!</span><br> You're all set.</h3>
     </div>
   </main>
   <script src="main.js"></script>
